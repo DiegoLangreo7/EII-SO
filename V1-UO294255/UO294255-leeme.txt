@@ -1,0 +1,52 @@
+García González Diego 
+
+He completado todos los ejercicios propuestos para la practica,
+es decir desde el 1 hasta el 15. He intendado corregir los fallos
+presentados en cada entrega semanal y el log final concuerda con 
+propuesto.
+
+Los archivos usados para probar los ejercicios son los siguientes:
+
+prog-V1-E3 : Al ejecutarlo dos veces el sistema no acaba a razon del halt.
+			 y se ejecuta las dos veces. 
+prog-V1-E6 : Al ejecutarlo el sistema muestra el error correspondiente y 
+			 continua con la ejecucion del siguiente programa (en caso de
+			 no haberlo finaliza).
+prog-V1-E7 : Ocurre lo mismo que en el caso anterior, canaliza la excepcion
+			 y finaliza la ejecucion.
+
+--------------------------------------------------------------------------
+
+Las respuestas a las preguntas del ejercicio 13:
+
+a. ¿Por qué hace falta salvar el valor actual del registro PC del procesador y de la PSW?
+
+Para poder volver a ejecutar el programa detenido desde el mismo punto de ejecucion donde se interrumpio.
+
+b. ¿Sería necesario salvar algún valor más?
+
+Si, seria necesario guardar los demas registros de la cpu usados por el programa en cuestión, para conseguir que el programa
+siguiera como si no hubiera ocurrido nada.
+
+c. A la vista de lo contestado en los apartados a) y b) anteriores, ¿sería necesario realizar alguna modificación en la función OperatingSystem_RestoreContext()? ¿Por qué?
+
+Si, puesto que ambos métodos por "default" solo restaura la pila y los registros de pc y de psw, habria que restauras los demas mencionados antes para salvar.
+
+d. ¿Afectarían los cambios anteriores a la implementación de alguna otra función o a la definición de alguna estructura de datos?
+
+Si, ademas de a la funcion OperatingSystem_SaveContext, sera necesario ampliar los datos guardados en el PCB para la almacenacion de nuevos datos.
+
+--------------------------------------------------------------------------
+
+La respuesta a la pregunta del ejercicio 15-b
+
+¿En qué momento se activa y desactiva el modo protegido?
+
+Se activa cuando es necesario utilizar operaciones del sistema operativo, en donde de reconocen las funciones a traves del septimo bit del psw (Executing bit).
+Este a su vez se desactiva para que los programas de usuario puedan operar sin afectar a la integridad del sistema operativo.
+
+---------------------------------------------------------------------------
+
+A cerca del proyecto, no deberia salir ningun bucle infinito ni nada fuera de lo comun en el tiempo de implementación.
+He intentado corregir todos los errores a la hora de imprimir por consola, y el resto de errores de entregas anteriores
+deberian estar solventados.
