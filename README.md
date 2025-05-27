@@ -16,5 +16,6 @@ Estructura del repositorio
   Descripción:
     Implementación de memoria virtual mediante paginación: gestión de tablas de páginas, algoritmos de reemplazo (FIFO, LRU) y simulación de fallos de página.
 
+---
 ## Autor
-[Diego García González](https://github.com/DiegoLangreo7)
+[DiegoLangreo7](https://github.com/DiegoLangreo7)
