@@ -1,0 +1,27 @@
+García González, Diego 
+UO294255
+-------------------------------------------------------------------------------------------------------
+- Con esto, compruebo que funcione bien el funcionamiento en general de las particiones.
+	./Simulator --debugSections=a programV4-1 0 programV4-2 22 programV4-3 44 programV4-4 66
+
+- Aqui se comprueba que el programa pasado por parametro entra en el sistema en el ciclo pasado tambien a su vez, por parametro.
+  Este a su vez genera un error por ejecutar una instruccion del SO desde el nivel de seguridad de usuario, lo cual echa al proceso del procesador
+  y finaliza controladamente la ejecucion.
+	./Simulator --daemonsProgramsFile=teachersDaemonsTest --memConfigFile=MemConfigTest1 programVerySimpleTest 100
+
+- Aqui se vuelven a comprobar los tiempos de entrada del proceso, y a su vez se comprueban los errores de invalid instruction y not exiting program.
+	./Simulator --memConfigFile=MemConfigTest2 test2-1 10 test2-2 30 iDontExist 350
+
+- Aqui se comprueba que los programas de usuario no puedan ejecutar ninguna instruccion del SO, finalizando los procesos y al final finalizando controladamente.
+	./Simulator --memConfigFile=MemConfigTest2 test3-1 10 test3-2 11 test3-3 12
+
+- Esta ultima ejecucion se hace para probar las funcionalidades de la cola de dormidos y de transferir el control del procesador.
+	./Simulator --memConfigFile=MemConfigTest2 test4-1 10 test4-2 11
+---------------------------------------------------------------------------------------------------------
+
+Se ha corregido una cosa respecto de la anterior entrega de la V4 descubierta mediante los test. 
+Esta consistia en que si un programa resultaba erroneo en ejecucion, el SO finalizaba el programa y si era el ultimo, acababa la ejecucion.
+El problema residia en que, en caso de dar el error previamente a ponerlo en ejecucion, el sistema entraba en bucle, necesitando añadir una instruccion
+para finalizar mas donde se cuentan las interrupciones de reloj.
+
+Respecto a las entregas anteriores, espero haber solucionado todos los problemas presentados.
