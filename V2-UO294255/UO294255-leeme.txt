@@ -1,0 +1,14 @@
+García González Diego 
+
+He completado todos los ejercicios propuestos para la practica, es decir, desde el 1 al 6. He intendado corregir los fallos presentados en cada entrega semanal y el log final concuerda con propuesto. En principio tambien solvente los problemas presentados en la anterior entrega conjunta (V1).
+
+Los archivos usados para probar los ejercicios son los siguientes:
+
+programV2-1a programV2-1b : Con estos programas comprobabamos que el sistema era capaz de lanzar excepciones de reloj aunque todavia no realizaba ningun despertar.
+ 
+programV2-2a programV2-2b programV2-2c : El sistema ejecuta los tres programas alternandose mediante sus tiempos en los que estan dormidos, una vez alterados todos ellos acaban y finaliza la ejecucion.
+
+------------------------------------------------------------------------------------
+
+Algo a añadir sobre el codigo seria que cree dos metodos ademas de los explicitamente necesarios, debido a que me quedarian dificiles de leer el resto de metodos.
+Toque bastantes clases debido a que no sabia donde fallaba el codigo, y por lo tanto puede que hayan quedado cosas modificadas incluyo innecesariamente.
